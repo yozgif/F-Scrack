@@ -117,7 +117,7 @@ class Crack():
     def mssql(self,user,pass_):#author:hos@YSRC
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((self.ip,self.port))
+            sock.connect((self.ip,int(self.port)))
             hh=binascii.b2a_hex(self.ip)
             husername=binascii.b2a_hex(user)
             lusername=len(user)
